@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //키보드
+        // function solution(s, k){
+        //     let result = true;
+        //     let noDuplicate = new Set();
+        //         if (/[A-Z]/.test(s)) {
+        //             noDuplicate.add("shift")
+        //         }
+        //         for(let word of s){
+        //             noDuplicate.add(word)
+        //         }
+        //         result = noDuplicate.size <= k
+        //         return result;
+        // }
+        // console.log(solution("Teacher" , 6));
+
+
+        //최댓값위치
+        // const solution = (nums) =>{
+        //     let result;
+        //     let max = 0;
+        //     for(let i = 0; i<9; i ++){
+        //         for(let j= 0; j<9; j ++){
+        //             if(max < nums[i][j]){
+        //                 max= Math.max(nums[i][j], max)
+        //                 result = [i+1, j+1]
+        //             }
+        //         }
+        //     }
+        //     console.log(max);
+        //     return result;
+        // }
+
+        // console.log(solution([[3, 23, 85, 34, 17, 74, 25, 52, 65],
+        //     [10, 7, 39, 42, 88, 52, 14, 72, 63],
+        //     [87, 42, 18, 78, 53, 45, 18, 84, 53],
+        //     [34, 28, 64, 85, 12, 16, 75, 36, 55],
+        //     [21, 77, 45, 35, 28, 75, 90, 76, 1],
+        //     [25, 87, 65, 15, 28, 11, 37, 28, 74],
+        //     [65, 27, 75, 41, 7, 89, 78, 64, 39],
+        //     [47, 47, 70, 45, 23, 65, 3, 41, 44],
+        //     [87, 13, 82, 38, 31, 12, 29, 29, 8]]
+        // ));
+
+        //각행의 최댓값
+        // const solution = (nums) =>{
+        //     let result =[];
+        //     let num = nums.length;
+        //     for(let i = 0; i<num; i ++){
+        //         let max = 0;
+        //         for(let j= 0; j<num; j ++){
+        //             if(nums[i][j] > max) {
+        //                 max = num[i][j]
+        //             }
+        //         }
+        //         result.push(max);
+        //     }
+        //     return result;
+        // }
+
+        // console.log(solution([[3, 23, 85, 34, 17, 74, 25, 52, 65],
+        //     [10, 7, 39, 42, 88, 52, 14, 72, 63],
+        //     [87, 42, 18, 78, 53, 45, 18, 84, 53],
+        //     [34, 28, 64, 85, 12, 16, 75, 36, 55],
+        //     [21, 77, 45, 35, 28, 75, 90, 76, 1],
+        //     [25, 87, 65, 15, 28, 11, 37, 28, 74],
+        //     [65, 27, 75, 41, 7, 89, 78, 64, 39],
+        //     [47, 47, 70, 45, 23, 65, 3, 41, 44],
+        //     [87, 13, 82, 38, 31, 12, 29, 29, ]]
+        // ));
+
+        //각열의 최댓값
+        // function solution(nums){
+        //     let answer =[]
+        //     for(let i = 0; i < nums.length; i++){
+        //         let maxNum = 0;
+        //         for(let j = 0; j < nums[i].length; j++){
+        //             if(nums[j][i] > maxNum){
+        //                 maxNum = nums[j][i]
+        //             }
+        //         }
+        //         answer.push(maxNum);
+        //     }
+        //     return answer
+        // }
+        // console.log(solution([[3, 23, 85, 34, 17, 74, 25, 52, 65],
+        //     [10, 7, 39, 42, 88, 52, 14, 72, 63],
+        //     [87, 42, 18, 78, 53, 45, 18, 84, 53],
+        //     [34, 28, 64, 85, 12, 16, 75, 36, 55],
+        //     [21, 77, 45, 35, 28, 75, 90, 76, 1],
+        //     [25, 87, 65, 15, 28, 11, 37, 28, 74],
+        //     [65, 27, 75, 41, 7, 89, 78, 64, 39],
+        //     [47, 47, 70, 45, 23, 65, 3, 41, 44],
+        //     [87, 13, 82, 38, 31, 12, 29, 29, 80]]
+        // ))
+
+        //격자판 최대합(가로세로)
+        // function solution(nums){
+        //     let answer = 0;
+        //     let max = []
+        //     let n = nums.length;
+            
+        //     for(let i = 0; i < n ; i++){
+        //         let temp = 0;
+        //         for(let j = 0 ; j < n; j++){
+        //         temp += nums[i][j]
+        //         }
+        //         max.push(temp);
+        //         temp = 0;
+        //         for(let k = 0 ; k < n; k++){
+        //         temp += nums[k][i]
+        //         }
+        //         max.push(temp);
+        //     }
+            
+        //     for(let a of max){
+        //         answer = Math.max(answer,a)
+        //     }
+        //     return answer;
+        //     }
+        //     const nums = [
+        //     [10, 13, 10, 12, 15],
+        //     [12, 39, 30, 23, 11],
+        //     [11, 25, 50, 53, 15],
+        //     [19, 27, 29, 37, 27],
+        //     [19, 13, 30, 13, 19]
+        //     ]
+        //     console.log(solution(nums)
+        // );
+
+        //격자판 최대합(가로세로대각선)
+        // function solution(nums){
+        //     let answer = 0;
+        //     let n = nums.length;
+            
+        //     for(let i = 0; i < n ; i++){
+        //         let sum1 = sum2 = 0;
+        //         for(let j = 0 ; j < n; j++){
+        //             sum1 += nums[i][j];
+        //             sum2 += nums[j][i];
+        //         }
+        //         answer = Math.max(answer, sum1, sum2);
+
+        //     }
+        //     for(let i = 0; i<n; i++){
+        //         //대각선
+        //     }
+        //     return answer;
+        // }
+        // const nums = [
+        //     [10, 13, 10, 12, 15],
+        //     [12, 39, 30, 23, 11],
+        //     [11, 25, 50, 53, 15],
+        //     [19, 27, 29, 37, 27],
+        //     [19, 13, 30, 13, 19]
+        // ]
+        // console.log(solution(nums));
+
+        //
+    </script>
+</body>
+</html>
