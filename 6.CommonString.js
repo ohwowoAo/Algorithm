@@ -6,6 +6,15 @@ function solution(s) {
   s.forEach((x) => {
     len = Math.min(len, x.length);
   });
+  for (i = 0; i < len; i++) {
+    let set = new Set(); //중복없앰
+    s.forEach((x) => {
+      set.add(x[i]);
+    });
+    console.log(set);
+    if (set.size === 1) answer += s[0][i];
+    else break;
+  }
 
   return answer;
 }
